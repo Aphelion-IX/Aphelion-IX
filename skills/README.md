@@ -47,4 +47,4 @@ Guidelines:
 
 | Skill | Description |
 | --- | --- |
-| _(none yet — add rows here as skills are added)_ | |
+| [`supabase`](./supabase) | Guidance for working with a Supabase project — schema/migrations, debugging via logs/advisors, RLS, and client integration. |
