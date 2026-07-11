@@ -48,3 +48,4 @@ Guidelines:
 | Skill | Description |
 | --- | --- |
 | [`supabase`](./supabase) | Guidance for working with a Supabase project — schema/migrations, debugging via logs/advisors, RLS, and client integration. |
+| [`vercel`](./vercel) | Guidance for deploying and operating a project on Vercel — config, environment variables, preview deployments, and debugging failed builds. |
