@@ -17,6 +17,16 @@ authoritative record of source + version; this file is the human-readable licens
 - Copyright (c) 2026 Supabase
 - License: MIT
 
+## `.agents/skills/zod/` (symlinked at `.claude/skills/zod`)
+
+- Source: https://github.com/anivar/zod-skill
+- Copyright (c) 2026 Anivar Aravind
+- License: MIT
+- Note: this repo keeps its skill files (`SKILL.md`, `rules/`, `references/`, `AGENTS.md`) at
+  the repo root rather than under a `skills/<name>/` subfolder, so `npx skills add` only pulled
+  `SKILL.md` — the `rules/`, `references/`, `AGENTS.md`, and `LICENSE` files were added manually
+  to match upstream, since `SKILL.md` itself points at those paths.
+
 ## Not yet installed
 
 `deploy-to-vercel`, `vercel-cli-with-tokens`, and `vercel-optimize` from

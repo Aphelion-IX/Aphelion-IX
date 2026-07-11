@@ -12,6 +12,12 @@
       "sourceType": "github",
       "skillPath": "skills/supabase-postgres-best-practices/SKILL.md",
       "computedHash": "ec56a54fba0e97bee52c7f244ba603bb284bf8d1b739c66a5cc84ec3df709d9d"
+    },
+    "zod": {
+      "source": "anivar/zod-skill",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "fbedbc8b086d471b1eee71a931a85d7e33c69d63f74490d3ff2df7cf2947b1ac"
     }
   }
 }

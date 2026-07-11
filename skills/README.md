@@ -73,6 +73,7 @@ currently installed this way.
 | --- | --- | --- |
 | `supabase` | `supabase/agent-skills` | Schema/migrations, RLS security traps, CLI/MCP troubleshooting, docs lookup discipline. |
 | `supabase-postgres-best-practices` | `supabase/agent-skills` | Postgres performance/schema/locking/security best practices. |
+| `zod` | `anivar/zod-skill` | Zod v4 API guidance — parsing, schema design, refinements/transforms, error handling, v3→v4 migration. Repo keeps skill files at its root rather than under `skills/<name>/`, so `rules/`, `references/`, `AGENTS.md`, and `LICENSE` were added by hand after install to match upstream — see `THIRD_PARTY_NOTICES.md`. |
 
 Not yet installed, but recommended when Vercel deployment work comes up:
 
