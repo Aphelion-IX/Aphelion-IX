@@ -43,9 +43,24 @@ Guidelines:
 3. Add any `references/`, `scripts/`, or `assets/` the skill needs.
 4. Add a row to the skill index below.
 
+## Vendored skills
+
+A few skills here (`supabase`, `deploy-to-vercel`, `vercel-cli-with-tokens`) are vendored,
+near-verbatim copies of the official skills published by Supabase and Vercel, under the MIT
+License — see [`THIRD_PARTY_NOTICES.md`](./THIRD_PARTY_NOTICES.md) for attribution. They're
+copied in rather than installed via `npx skills add` so they live alongside the
+custom-authored skills in one place; check the source repo if you need the latest version.
+
+`vercel-optimize` is the exception: upstream it's a large, tool-heavy pipeline (a dozen+
+interdependent scripts, external CLI version and paid-feature requirements) that isn't
+practical to hand-vendor, so `skills/vercel-optimize/SKILL.md` is a short pointer with the
+real install command instead of a copy.
+
 ## Skill index
 
 | Skill | Description |
 | --- | --- |
-| [`supabase`](./supabase) | Guidance for working with a Supabase project — schema/migrations, debugging via logs/advisors, RLS, and client integration. |
-| [`vercel`](./vercel) | Guidance for deploying and operating a project on Vercel — config, environment variables, preview deployments, and debugging failed builds. |
+| [`supabase`](./supabase) | *(vendored)* Official Supabase skill — schema/migrations, RLS security traps, CLI/MCP troubleshooting, docs lookup discipline. |
+| [`deploy-to-vercel`](./deploy-to-vercel) | *(vendored)* Official Vercel skill — decision tree for deploying a project (git push vs. CLI vs. link-first vs. no-auth fallback), always previews unless production is explicit. |
+| [`vercel-cli-with-tokens`](./vercel-cli-with-tokens) | *(vendored)* Official Vercel skill — deploying/managing a Vercel project via CLI with token-based auth instead of `vercel login`. |
+| [`vercel-optimize`](./vercel-optimize) | *(pointer only, not vendored)* Vercel cost/performance audit — see the skill's `SKILL.md` for the real install command. |
