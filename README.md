@@ -14,3 +14,7 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+
+### 🛠️ Skills Library
+
+This repo also hosts a personal library of reusable [Claude Skills](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview) — see [`skills/`](./skills).
