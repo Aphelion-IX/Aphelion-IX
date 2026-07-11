@@ -1,37 +1,35 @@
 # Third-Party Notices
 
-Some skills in this library are vendored copies (verbatim or lightly adapted) of
-skills published by other projects, under the MIT License. This file collects the
-required attribution for those.
+Skills installed via `npx skills add` (see [`README.md`](./README.md)) are copies of skills
+published by other projects, under the MIT License. This file collects the required
+attribution for what's currently installed. `skills-lock.json` at the repo root is the
+authoritative record of source + version; this file is the human-readable license summary.
 
-## `supabase/`
+## `.agents/skills/supabase/` (symlinked at `.claude/skills/supabase`)
 
 - Source: https://github.com/supabase/agent-skills (`skills/supabase`)
 - Copyright (c) 2026 Supabase
 - License: MIT
 
-## `deploy-to-vercel/`
+## `.agents/skills/supabase-postgres-best-practices/` (symlinked at `.claude/skills/supabase-postgres-best-practices`)
 
-- Source: https://github.com/vercel-labs/agent-skills (`skills/deploy-to-vercel`)
-- Copyright (c) Vercel, Inc.
+- Source: https://github.com/supabase/agent-skills (`skills/supabase-postgres-best-practices`)
+- Copyright (c) 2026 Supabase
 - License: MIT
 
-## `vercel-cli-with-tokens/`
+## Not yet installed
 
-- Source: https://github.com/vercel-labs/agent-skills (`skills/vercel-cli-with-tokens`)
-- Copyright (c) Vercel, Inc.
-- License: MIT
+`deploy-to-vercel`, `vercel-cli-with-tokens`, and `vercel-optimize` from
+https://github.com/vercel-labs/agent-skills (Copyright (c) Vercel, Inc., MIT License) are not
+currently installed. Add a row here when they are (`npx skills add vercel-labs/agent-skills
+--skill <name>`).
 
-## `vercel-optimize/`
-
-Not vendored — `skills/vercel-optimize/SKILL.md` here is a short original pointer
-(not a copy of upstream content) describing how to install the real skill from
-https://github.com/vercel-labs/agent-skills. No attribution obligation applies to
-that file itself, but the same MIT license governs the upstream skill it points to.
+`skills/vercel-optimize/SKILL.md` in this repo is a short original pointer written by us — not
+a copy of upstream content — so it carries no separate attribution obligation.
 
 ---
 
-MIT License text (applies to the vendored content above):
+MIT License text (applies to all installed skills above):
 
 ```
 MIT License

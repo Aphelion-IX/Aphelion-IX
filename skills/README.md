@@ -43,24 +43,45 @@ Guidelines:
 3. Add any `references/`, `scripts/`, or `assets/` the skill needs.
 4. Add a row to the skill index below.
 
-## Vendored skills
+## Third-party skills: installed, not vendored
 
-A few skills here (`supabase`, `deploy-to-vercel`, `vercel-cli-with-tokens`) are vendored,
-near-verbatim copies of the official skills published by Supabase and Vercel, under the MIT
-License — see [`THIRD_PARTY_NOTICES.md`](./THIRD_PARTY_NOTICES.md) for attribution. They're
-copied in rather than installed via `npx skills add` so they live alongside the
-custom-authored skills in one place; check the source repo if you need the latest version.
+Skills published by other projects (Supabase, Vercel, etc.) are installed with the
+[`skills` CLI](https://github.com/vercel-labs/skills) rather than hand-copied into this
+folder. That tool:
 
-`vercel-optimize` is the exception: upstream it's a large, tool-heavy pipeline (a dozen+
-interdependent scripts, external CLI version and paid-feature requirements) that isn't
-practical to hand-vendor, so `skills/vercel-optimize/SKILL.md` is a short pointer with the
-real install command instead of a copy.
+- Clones the source repo and writes the real skill files to `.agents/skills/<name>/`
+  (the canonical, tool-managed copy) at the repo root.
+- Symlinks `.claude/skills/<name>` → `.agents/skills/<name>` so Claude Code picks it up.
+- Records what's installed, from where, and a content hash in `skills-lock.json` at the
+  repo root — that file is the source of truth for what third-party skills exist and where
+  they came from.
 
-## Skill index
+`skills/` (this folder) is reserved for skills we author ourselves. To pull in a third-party
+skill:
+
+```bash
+npx skills add <owner>/<repo> --skill <skill-name>   # e.g. supabase/agent-skills --skill supabase
+npx skills add <owner>/<repo> --skill '*'            # install every skill in the repo
+```
+
+See [`THIRD_PARTY_NOTICES.md`](./THIRD_PARTY_NOTICES.md) for attribution/licensing of what's
+currently installed this way.
+
+### Currently installed via `npx skills add`
+
+| Skill | Source | Description |
+| --- | --- | --- |
+| `supabase` | `supabase/agent-skills` | Schema/migrations, RLS security traps, CLI/MCP troubleshooting, docs lookup discipline. |
+| `supabase-postgres-best-practices` | `supabase/agent-skills` | Postgres performance/schema/locking/security best practices. |
+
+Not yet installed, but recommended when Vercel deployment work comes up:
+
+```bash
+npx skills add vercel-labs/agent-skills --skill deploy-to-vercel,vercel-cli-with-tokens,vercel-optimize
+```
+
+## Skill index (authored here)
 
 | Skill | Description |
 | --- | --- |
-| [`supabase`](./supabase) | *(vendored)* Official Supabase skill — schema/migrations, RLS security traps, CLI/MCP troubleshooting, docs lookup discipline. |
-| [`deploy-to-vercel`](./deploy-to-vercel) | *(vendored)* Official Vercel skill — decision tree for deploying a project (git push vs. CLI vs. link-first vs. no-auth fallback), always previews unless production is explicit. |
-| [`vercel-cli-with-tokens`](./vercel-cli-with-tokens) | *(vendored)* Official Vercel skill — deploying/managing a Vercel project via CLI with token-based auth instead of `vercel login`. |
-| [`vercel-optimize`](./vercel-optimize) | *(pointer only, not vendored)* Vercel cost/performance audit — see the skill's `SKILL.md` for the real install command. |
+| [`vercel-optimize`](./vercel-optimize) | *(pointer only)* Explains why Vercel's cost/performance audit skill isn't vendored here and gives the real install command. Superseded once the skill above is actually installed via `npx skills add`. |
