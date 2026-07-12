@@ -74,12 +74,21 @@ currently installed this way.
 | `supabase` | `supabase/agent-skills` | Schema/migrations, RLS security traps, CLI/MCP troubleshooting, docs lookup discipline. |
 | `supabase-postgres-best-practices` | `supabase/agent-skills` | Postgres performance/schema/locking/security best practices. |
 | `zod` | `anivar/zod-skill` | Zod v4 API guidance — parsing, schema design, refinements/transforms, error handling, v3→v4 migration. Repo keeps skill files at its root rather than under `skills/<name>/`, so `rules/`, `references/`, `AGENTS.md`, and `LICENSE` were added by hand after install to match upstream — see `THIRD_PARTY_NOTICES.md`. |
+| `deploy-to-vercel` | `vercel-labs/agent-skills` | Deployment decision tree (git push vs. CLI vs. link-first vs. no-auth fallback); always previews unless production is explicit. |
+| `vercel-cli-with-tokens` | `vercel-labs/agent-skills` | Deploying/managing a Vercel project via CLI with token-based auth instead of `vercel login`. |
+| `vercel-react-best-practices` | `vercel-labs/agent-skills` | 70+ React/Next.js performance rules (rendering, re-renders, async/data fetching, bundling, server components) from Vercel Engineering. |
+| `vercel-composition-patterns` | `vercel-labs/agent-skills` | React composition strategies — compound components, avoiding boolean-prop proliferation, children over render props, React 19 API changes (no `forwardRef`). |
 
-Not yet installed, but recommended when Vercel deployment work comes up:
+Not yet installed, but recommended if a Vercel cost/performance audit comes up (heavier
+dependency — needs Vercel CLI v53+ and paid Observability Plus, see
+[`vercel-optimize`](./vercel-optimize)'s pointer for detail):
 
 ```bash
-npx skills add vercel-labs/agent-skills --skill deploy-to-vercel,vercel-cli-with-tokens,vercel-optimize
+npx skills add vercel-labs/agent-skills -s vercel-optimize
 ```
+
+Note: this tool's `--skill a,b,c` comma-separated form silently matched nothing for us; use a
+separate `-s <name>` per skill instead (as above), or `--all` / `-s '*'` for everything.
 
 ## Skill index (authored here)
 

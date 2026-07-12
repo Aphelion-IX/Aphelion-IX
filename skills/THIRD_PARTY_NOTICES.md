@@ -27,12 +27,38 @@ authoritative record of source + version; this file is the human-readable licens
   `SKILL.md` — the `rules/`, `references/`, `AGENTS.md`, and `LICENSE` files were added manually
   to match upstream, since `SKILL.md` itself points at those paths.
 
+## `.agents/skills/deploy-to-vercel/` (symlinked at `.claude/skills/deploy-to-vercel`)
+
+- Source: https://github.com/vercel-labs/agent-skills (`skills/deploy-to-vercel`)
+- Copyright (c) Vercel, Inc.
+- License: MIT
+- Note: upstream also ships a redundant `Archive.zip` (the same `SKILL.md` +
+  `resources/*.sh` re-packaged, with macOS `__MACOSX` cruft) alongside the unpacked files;
+  we deleted it after install since it duplicated content already present unpacked.
+
+## `.agents/skills/vercel-cli-with-tokens/` (symlinked at `.claude/skills/vercel-cli-with-tokens`)
+
+- Source: https://github.com/vercel-labs/agent-skills (`skills/vercel-cli-with-tokens`)
+- Copyright (c) Vercel, Inc.
+- License: MIT
+
+## `.agents/skills/vercel-composition-patterns/` (symlinked at `.claude/skills/vercel-composition-patterns`)
+
+- Source: https://github.com/vercel-labs/agent-skills (`skills/composition-patterns`)
+- Copyright (c) Vercel, Inc.
+- License: MIT
+
+## `.agents/skills/vercel-react-best-practices/` (symlinked at `.claude/skills/vercel-react-best-practices`)
+
+- Source: https://github.com/vercel-labs/agent-skills (`skills/react-best-practices`)
+- Copyright (c) Vercel, Inc.
+- License: MIT
+
 ## Not yet installed
 
-`deploy-to-vercel`, `vercel-cli-with-tokens`, and `vercel-optimize` from
-https://github.com/vercel-labs/agent-skills (Copyright (c) Vercel, Inc., MIT License) are not
-currently installed. Add a row here when they are (`npx skills add vercel-labs/agent-skills
---skill <name>`).
+`vercel-optimize` from https://github.com/vercel-labs/agent-skills (Copyright (c) Vercel,
+Inc., MIT License) is not currently installed — see [`README.md`](./README.md) for why and
+the install command. Add a row here when it is.
 
 `skills/vercel-optimize/SKILL.md` in this repo is a short original pointer written by us — not
 a copy of upstream content — so it carries no separate attribution obligation.
