@@ -77,6 +77,7 @@ currently installed this way.
 | `deploy-to-vercel` | `vercel-labs/agent-skills` | Deployment decision tree (git push vs. CLI vs. link-first vs. no-auth fallback); always previews unless production is explicit. |
 | `vercel-cli-with-tokens` | `vercel-labs/agent-skills` | Deploying/managing a Vercel project via CLI with token-based auth instead of `vercel login`. |
 | `vercel-react-best-practices` | `vercel-labs/agent-skills` | 70+ React/Next.js performance rules (rendering, re-renders, async/data fetching, bundling, server components) from Vercel Engineering. |
+| `vercel-composition-patterns` | `vercel-labs/agent-skills` | React composition strategies — compound components, avoiding boolean-prop proliferation, children over render props, React 19 API changes (no `forwardRef`). |
 
 Not yet installed, but recommended if a Vercel cost/performance audit comes up (heavier
 dependency — needs Vercel CLI v53+ and paid Observability Plus, see

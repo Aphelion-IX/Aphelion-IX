@@ -42,6 +42,12 @@ authoritative record of source + version; this file is the human-readable licens
 - Copyright (c) Vercel, Inc.
 - License: MIT
 
+## `.agents/skills/vercel-composition-patterns/` (symlinked at `.claude/skills/vercel-composition-patterns`)
+
+- Source: https://github.com/vercel-labs/agent-skills (`skills/composition-patterns`)
+- Copyright (c) Vercel, Inc.
+- License: MIT
+
 ## `.agents/skills/vercel-react-best-practices/` (symlinked at `.claude/skills/vercel-react-best-practices`)
 
 - Source: https://github.com/vercel-labs/agent-skills (`skills/react-best-practices`)
