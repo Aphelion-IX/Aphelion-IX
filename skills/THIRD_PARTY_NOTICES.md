@@ -5,19 +5,22 @@ published by other projects, under the MIT License. This file collects the requi
 attribution for what's currently installed. `skills-lock.json` at the repo root is the
 authoritative record of source + version; this file is the human-readable license summary.
 
-## `.agents/skills/supabase/` (symlinked at `.claude/skills/supabase`)
+Real files live under `skills/<name>/`; `.agents/skills/<name>` and `.claude/skills/<name>`
+are symlinks to that same content (see `README.md` for why).
+
+## `skills/supabase/`
 
 - Source: https://github.com/supabase/agent-skills (`skills/supabase`)
 - Copyright (c) 2026 Supabase
 - License: MIT
 
-## `.agents/skills/supabase-postgres-best-practices/` (symlinked at `.claude/skills/supabase-postgres-best-practices`)
+## `skills/supabase-postgres-best-practices/`
 
 - Source: https://github.com/supabase/agent-skills (`skills/supabase-postgres-best-practices`)
 - Copyright (c) 2026 Supabase
 - License: MIT
 
-## `.agents/skills/zod/` (symlinked at `.claude/skills/zod`)
+## `skills/zod/`
 
 - Source: https://github.com/anivar/zod-skill
 - Copyright (c) 2026 Anivar Aravind
@@ -27,7 +30,7 @@ authoritative record of source + version; this file is the human-readable licens
   `SKILL.md` — the `rules/`, `references/`, `AGENTS.md`, and `LICENSE` files were added manually
   to match upstream, since `SKILL.md` itself points at those paths.
 
-## `.agents/skills/deploy-to-vercel/` (symlinked at `.claude/skills/deploy-to-vercel`)
+## `skills/deploy-to-vercel/`
 
 - Source: https://github.com/vercel-labs/agent-skills (`skills/deploy-to-vercel`)
 - Copyright (c) Vercel, Inc.
@@ -36,19 +39,19 @@ authoritative record of source + version; this file is the human-readable licens
   `resources/*.sh` re-packaged, with macOS `__MACOSX` cruft) alongside the unpacked files;
   we deleted it after install since it duplicated content already present unpacked.
 
-## `.agents/skills/vercel-cli-with-tokens/` (symlinked at `.claude/skills/vercel-cli-with-tokens`)
+## `skills/vercel-cli-with-tokens/`
 
 - Source: https://github.com/vercel-labs/agent-skills (`skills/vercel-cli-with-tokens`)
 - Copyright (c) Vercel, Inc.
 - License: MIT
 
-## `.agents/skills/vercel-composition-patterns/` (symlinked at `.claude/skills/vercel-composition-patterns`)
+## `skills/vercel-composition-patterns/`
 
 - Source: https://github.com/vercel-labs/agent-skills (`skills/composition-patterns`)
 - Copyright (c) Vercel, Inc.
 - License: MIT
 
-## `.agents/skills/vercel-react-best-practices/` (symlinked at `.claude/skills/vercel-react-best-practices`)
+## `skills/vercel-react-best-practices/`
 
 - Source: https://github.com/vercel-labs/agent-skills (`skills/react-best-practices`)
 - Copyright (c) Vercel, Inc.
