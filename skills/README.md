@@ -132,3 +132,18 @@ Not yet installed:
 ```bash
 npx skills add vercel-labs/agent-skills -s vercel-optimize
 ```
+
+## Evaluated, nothing to install
+
+Topics checked for an installable skill where none exists upstream, so the next search starts
+here instead of from scratch:
+
+- **Typesense** (checked 2026-07-25): no Agent Skill / `SKILL.md` found for Typesense anywhere —
+  not in `anthropics/skills`, not in the large aggregators (`VoltAgent/awesome-agent-skills`,
+  `alirezarezvani/claude-skills`), not published by Typesense's own GitHub org. What does exist
+  is a handful of third-party **MCP servers** (a different mechanism — live tools against a
+  running Typesense instance, not authored knowledge) if that's ever wanted instead: e.g.
+  [`avarant/typesense-mcp-server`](https://github.com/avarant/typesense-mcp-server) (Python) or
+  [`suhail-ak-2/mcp-typesense-server`](https://github.com/suhail-ak-2/mcp-typesense-server)
+  (TypeScript). Neither is added anywhere in this repo (`.mcp.json` or otherwise) — wiring one
+  up needs a real Typesense host/API key to configure.
