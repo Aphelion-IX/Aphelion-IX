@@ -69,4 +69,4 @@ See the [full frontmatter reference](https://code.claude.com/docs/en/sub-agents#
 
 | Agent | Description |
 | --- | --- |
-| *(none yet — add one!)* | |
+| [`docker-socket-proxy`](../agents/docker-socket-proxy.md) | Sets up and debugs a Docker socket proxy (Tecnativa's `docker-socket-proxy`) — least-privilege Docker API access for containers instead of bind-mounting the raw socket. |
