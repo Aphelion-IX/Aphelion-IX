@@ -1,0 +1,5 @@
+{
+  "name": "aphelion-ix",
+  "description": "Personal library of Claude Code skills, subagents, slash commands, and shared MCP server config.",
+  "keywords": ["skills", "agents", "subagents", "commands", "mcp"]
+}
