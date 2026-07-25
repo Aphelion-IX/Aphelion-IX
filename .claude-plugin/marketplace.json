@@ -1,0 +1,14 @@
+{
+  "name": "aphelion-ix",
+  "owner": {
+    "name": "Aphelion-IX"
+  },
+  "description": "Self-referencing marketplace for this repo's own plugin — skills, subagents, slash commands, and MCP config, installable in any other project.",
+  "plugins": [
+    {
+      "name": "aphelion-ix",
+      "source": "./",
+      "description": "Personal library of Claude Code skills, subagents, slash commands, and shared MCP server config."
+    }
+  ]
+}

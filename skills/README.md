@@ -2,7 +2,11 @@
 
 This directory is a personal library of reusable [Claude Skills](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview) — self-contained folders that give Claude Code (and other Claude Agent SDK apps) a specific, on-demand capability.
 
-This repo serves **two** purposes at once:
+See also [`agents/`](../agents) and [`commands/`](../commands) for the rest of this repo's
+Claude Code library (subagents and slash commands), and the root [`README.md`](../README.md)
+for how everything here also installs together as a single plugin in other projects.
+
+This directory serves **two** purposes at once:
 
 1. **A shared skill source.** Because every skill's real files live in this plain, git-visible
    `skills/` folder (not a hidden dot-directory), any other repo can pull them in with:
